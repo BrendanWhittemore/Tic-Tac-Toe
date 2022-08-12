@@ -19,4 +19,4 @@ This project was completed to supplement specific cases of spring analysis as ou
 <a href = "https://en.wikipedia.org/wiki/C_(programming_language)#:~:text=C%20is%20an%20imperative%20procedural,all%20with%20minimal%20runtime%20support.">C</a>
 
 ### Frameworks, Libraries, and Tools
-<p><a href = "https://gcc.gnu.org/">GCC</a></p> - C Compiler
+<p><a href = "https://gcc.gnu.org/">GCC</a> - C Compiler</p>
