@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include "myheader.h"
-
-#define ROWS 3
-#define COLS 3
 
 int main()
 {
-    char **board;
+    int rows;
+    int cols;
+    char **board = buildboard(&rows, &cols);
+
+    printboard(rows, cols, board);
 }
