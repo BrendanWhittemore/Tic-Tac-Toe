@@ -5,25 +5,49 @@ char **buildboard(int *rows, int *cols)
 {
     char **board;
 
-    printf("Enter the number of rows: ");
-    scanf("%d", rows);
+    while (1)
+    {
+        printf("Enter the number of rows: ");
+        scanf("%d", rows);
+
+        if (*rows < 1)
+        {
+            fprintf(stderr, "Error: Number of rows must be > 0\n");
+        }
+        else
+        {
+            break;
+        }
+    }
 
     board = (char **)malloc((*rows) * sizeof(char *));
     if (board == NULL)
     {
-        fprintf(stderr, "Error: Memory allocation failed");
+        fprintf(stderr, "Error: Memory allocation failed\n");
         exit(1);
     }
 
-    printf("Enter the number of columns: ");
-    scanf("%d", cols);
+    while (1)
+    {
+        printf("Enter the number of columns: ");
+        scanf("%d", cols);
+
+        if (*cols < 1)
+        {
+            fprintf(stderr, "Error: Number of columns must be > 0\n");
+        }
+        else
+        {
+            break;
+        }
+    }
 
     for (int i = 0; i < *rows; i++)
     {
         board[i] = (char *)malloc((*cols) * sizeof(char));
         if (board[i] == NULL)
         {
-            fprintf(stderr, "Error: Memory allocation failed");
+            fprintf(stderr, "Error: Memory allocation failed\n");
             exit(1);
         }
 
