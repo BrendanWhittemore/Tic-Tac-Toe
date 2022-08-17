@@ -8,7 +8,9 @@ void printboard(int sidelen, char **board)
         {
             printf("%c ", board[i][j]);
         }
-        
+
         printf("\n");
     }
+
+    printf("\n");
 }

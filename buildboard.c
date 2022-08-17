@@ -20,7 +20,7 @@ char **buildboard(int *sidelen)
         }
     }
 
-    board = (char **)malloc((*sidelen) * sizeof(char *));
+    board = (char **)malloc((*sidelen) * sizeof(char *)); // allocate rows
     if (board == NULL)
     {
         fprintf(stderr, "Error: Memory allocation failed\n");
@@ -29,14 +29,14 @@ char **buildboard(int *sidelen)
 
     for (int i = 0; i < *sidelen; i++)
     {
-        board[i] = (char *)malloc((*sidelen) * sizeof(char));
+        board[i] = (char *)malloc((*sidelen) * sizeof(char)); // allocate cols
         if (board[i] == NULL)
         {
             fprintf(stderr, "Error: Memory allocation failed\n");
             exit(1);
         }
 
-        for (int j = 0; j < *sidelen; j++)
+        for (int j = 0; j < *sidelen; j++) // assign initial values
         {
             board[i][j] = '-';
         }
