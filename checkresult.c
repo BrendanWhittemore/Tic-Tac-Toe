@@ -7,7 +7,7 @@ int checkresult(int sidelen, char **board, int rowchoice, int colchoice, char tu
 {
     static int movecount = 0;
 
-    if (movecount++ > ((sidelen - 1) * 2)) // minimum moves for a win
+    if (++movecount > ((sidelen - 1) * 2)) // minimum moves for a win
     {
         // check col
         for (int i = 0; i < sidelen; i++)
