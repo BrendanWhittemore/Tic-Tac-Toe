@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-void printboard(int rows, int cols, char **board)
+void printboard(int sidelen, char **board)
 {
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < sidelen; i++)
     {
-        for (int j = 0; j < cols; j++)
+        for (int j = 0; j < sidelen; j++)
         {
             printf("%c ", board[i][j]);
         }
-        
+
         printf("\n");
     }
+
+    printf("\n");
 }

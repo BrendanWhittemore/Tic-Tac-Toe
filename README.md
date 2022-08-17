@@ -12,7 +12,7 @@ tictactoe
 ```
 
 ## Objectives
-This project was completed to supplement specific cases of spring analysis as outlined in <a href = "https://www.amazon.com/Shigleys-Mechanical-Engineering-Richard-Budynas/dp/0073398217">Shigley's Mechanical Engineering Design</a>.
+This project was completed as a C language refresher.
 
 ## Built With
 ### Languages
