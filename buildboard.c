@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char **buildboard(int *rows, int *cols)
+char **buildboard(int *sidelen)
 {
     char **board;
 
     while (1)
     {
-        printf("Enter the number of rows: ");
-        scanf("%d", rows);
+        printf("Enter the size of the board (side length): ");
+        scanf("%d", sidelen);
 
-        if (*rows < 1)
+        if (*sidelen < 1)
         {
-            fprintf(stderr, "Error: Number of rows must be > 0\n");
+            fprintf(stderr, "Error: Side length must be > 0\n");
         }
         else
         {
@@ -20,38 +20,23 @@ char **buildboard(int *rows, int *cols)
         }
     }
 
-    board = (char **)malloc((*rows) * sizeof(char *));
+    board = (char **)malloc((*sidelen) * sizeof(char *));
     if (board == NULL)
     {
         fprintf(stderr, "Error: Memory allocation failed\n");
         exit(1);
     }
 
-    while (1)
+    for (int i = 0; i < *sidelen; i++)
     {
-        printf("Enter the number of columns: ");
-        scanf("%d", cols);
-
-        if (*cols < 1)
-        {
-            fprintf(stderr, "Error: Number of columns must be > 0\n");
-        }
-        else
-        {
-            break;
-        }
-    }
-
-    for (int i = 0; i < *rows; i++)
-    {
-        board[i] = (char *)malloc((*cols) * sizeof(char));
+        board[i] = (char *)malloc((*sidelen) * sizeof(char));
         if (board[i] == NULL)
         {
             fprintf(stderr, "Error: Memory allocation failed\n");
             exit(1);
         }
 
-        for (int j = 0; j < *cols; j++)
+        for (int j = 0; j < *sidelen; j++)
         {
             board[i][j] = '-';
         }

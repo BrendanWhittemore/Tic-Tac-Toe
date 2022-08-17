@@ -3,11 +3,10 @@
 
 int main()
 {
-    int rows;
-    int cols;
-    char **board = buildboard(&rows, &cols);
+    int sidelen;
+    char **board = buildboard(&sidelen);
 
-    printboard(rows, cols, board);
+    printboard(sidelen, board);
 
     while (1)
     {
@@ -16,12 +15,12 @@ int main()
 
         while (1)
         {
-            printf("Choose a row (1-%d): ", rows);
+            printf("Choose a row (1-%d): ", sidelen);
             scanf("%d", &rowchoice);
 
-            if ((rowchoice < 1) || (rowchoice > rows))
+            if ((rowchoice < 1) || (rowchoice > sidelen))
             {
-                fprintf(stderr, "Error: Please enter a row between 1 and %d\n", rows);
+                fprintf(stderr, "Error: Please enter a row between 1 and %d\n", sidelen);
             }
             else
             {
@@ -32,12 +31,12 @@ int main()
 
         while (1)
         {
-            printf("Choose a column (1-%d): ", cols);
+            printf("Choose a column (1-%d): ", sidelen);
             scanf("%d", &colchoice);
 
-            if ((colchoice < 1) || (colchoice > cols))
+            if ((colchoice < 1) || (colchoice > sidelen))
             {
-                fprintf(stderr, "Error: Plese enter a column between 1 and %d\n", cols);
+                fprintf(stderr, "Error: Plese enter a column between 1 and %d\n", sidelen);
             }
             else
             {

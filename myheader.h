@@ -1,2 +1,2 @@
-char **buildboard(int *, int *);
-void printboard(int, int, char **);
+char **buildboard(int *);
+void printboard(int, char **);
